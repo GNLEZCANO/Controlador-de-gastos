@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./assets/syles/styles.css";
+import Operaciones from "./operaciones";
+import Filtros from "./filtros";
+import Balance from "./balance";
+import Navbar from "./navbar";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+          <Navbar />
+          <div className="container">
+              <div className="row justify-content-md-center mt-3">
+                  <div className="col-4">
+                      <Balance />
+                      <Filtros />
+                  </div>
+                  <div className="col-8">
+                      <Operaciones />
+                  </div>
+              </div>
+          </div>
+      </>
   );
 }
 
